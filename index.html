@@ -7,9 +7,9 @@
 
   <title>Мост Групп - Главная</title>
   <meta content="Дорожно-строительная компания номер №1 в Кыргызстане лицензии КРЦ-2 №04504 ( I уровень ответственности )." name="description">
-  <meta content="ОсОО Мост Групп, Мост Групп, Строительство Дорог, Most Group KG" name="keywords">
+  <meta content="ОсОО Мост Групп, Мост Групп, Строительство Дорог, Most Group KG, асфальт, асфальтовое покрытие, бетон, производство бетона, ЩМА, лотки железобетонные, блоки железобетонные, лотки ЛР8, ЛР4, ЛР6, ЖБИ изделия, щебень, инертные материалы, отсев, строительство тоннелей, строительство мостов" name="keywords">
 
-  <meta property="og:title" content="Мост Групп - Главная">
+  <meta property="og:title" content="ОсОО Мост Групп">
   <meta property="og:description" content="Дорожно-строительная компания номер №1 в Кыргызстане.">
   <meta property="og:image" content="https://static.tildacdn.com/tild3139-3531-4466-a139-306639613965/footer-tunnel.JPG">
   <meta property="og:url" content="https://www.mostgroupkg.com">
@@ -38,7 +38,19 @@
 </head>
 
 <body>
-
+  <div class="contact-bar img-bg" style="background-image:url(assets/img/main-back.png);" >
+    <a class="phone" href="">+996 (312) 41-88-63</a> <a class="email" href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a> 
+  </div>
+  <script>
+    window.addEventListener('scroll', function() {
+    var contactBar = document.querySelector('.contact-bar');
+    if (window.scrollY > 100) { // Если прокрутка больше 100px, показываем контакт-бар
+      contactBar.style.top = '0';
+    } else { // Иначе скрываем контакт-бар
+      contactBar.style.top = '-50px';
+    }
+  });
+  </script>
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -409,6 +421,18 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
               <div class="portfolio-content h-100">
+                <img src="assets/img/tunnel-photo.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Строительсво Туннеля</h4>
+                  <p>Туннель на перевале "Чычкан"</p>
+                  <a href="assets/img/tunnel-photo.jpg" title="Тунель 'Чычкан' на Дороге Ош - Бишкек" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="ru/projects/chychkan-tunnel.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+             </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+              <div class="portfolio-content h-100">
                 <img src="assets/img/projects/our-projects/ul-gagarina/20.jpeg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Строительсво Автодороги</h4>
@@ -437,20 +461,32 @@
                 <div class="portfolio-info">
                   <h4>Строительство Автодороги</h4>
                   <p>Ул. Гагарина г. Бишкек</p>
-                  <a href="assets/img/projects/our-projects/ul-gagarina/13.jpegg" title="Construction 2" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/our-projects/ul-gagarina/13.jpeg" title="Ул. Гагарина г. Бишкек" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="ru/projects/ul-gagarina-dzamgarzhieva.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Projects Item -->
-
+            
             <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
               <div class="portfolio-content h-100">
-                <img src="assets/img/tunnel-photo.jpg" class="img-fluid" alt="">
+                <img src="assets/img/projects/our-projects/most-altyn-ordo/6.jpeg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Строительсво Туннеля</h4>
-                  <p>Туннель на перевале "Чычкан"</p>
-                  <a href="assets/img/tunnel-photo.jpg" title="Тунель 'Чычкан' на Дороге Ош - Бишкек" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="ru/projects/chychkan-tunnel.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Строительство моста и подъездной дороги</h4>
+                  <p>по ул. Виноградная в ж/м "Алтын-Ордо"</p>
+                  <a href="assets/img/projects/our-projects/most-altyn-ordo/6.jpeg" title="Строительство моста и подъездной дороги" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="ru/projects/ul-gagarina-dzamgarzhieva.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+            
+            <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/our-projects/most-kokart/8.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Строительство моста через реку Кок-Арт</h4>
+                  <p>в Джалал-Абадской обл.</p>
+                  <a href="assets/img/projects/our-projects/most-kokart/8.jpeg" title="Строительство моста через реку Кок-Арт" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="ru/projects/ul-gagarina-dzamgarzhieva.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Projects Item -->
@@ -731,20 +767,28 @@
                 ул. Л. Толстого, 103 A<br>
                 г. Бишкек, 720009, Кыргызстан<br><br>
                 <strong>Телефон:</strong> 
-                <ul>
-                  <li> +996 (312) 41 88 63</li> 
-                  <li>+996 (312) 41 88 57</li>
-                </ul>
-                <strong>Email:</strong> info@mostgroupkg.com<br>
+                  <p>+996 (312) 41 88 63</p>
+                  <p>+996 (312) 41 88 57</p>
+                  <br>
+                <strong>Email:</strong> <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
               </p>
               <div class="social-links d-flex mt-3">
-                <!-- <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a> -->
-                <!-- <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a> -->
-                <!-- <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a> -->
+                <a href="https://www.youtube.com/channel/UCX1PKed6s8BvQ0D6c8oAkng" class="d-flex align-items-center justify-content-center"><i class="bi bi-youtube"></i></a>
                 <a href="https://www.linkedin.com/company/mostgroupkg.com/" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div><!-- End footer info column-->
+
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Полезные ссылки</h4>
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="services.html">Наши услуги</a></li>
+              <li><a href="">Туннель "Чычкан"</a></li>
+            </ul>
+          </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Наши услуги</h4>
@@ -756,7 +800,7 @@
               <li><a href="ru/service-details.html?service=Возведение мостов и дорог">Мосты и Дороги</a></li>
               <li><a href="ru/service-details.html?service=Дорожно-строительные работы: асфальтирование">Aсфальтирование</a></li>
             </ul>
-          </div><!-- End footer links column-->
+          </div>
 
           <!-- <div class="col-lg-2 col-md-3 footer-links">
             <h4>Наши проекты</h4>

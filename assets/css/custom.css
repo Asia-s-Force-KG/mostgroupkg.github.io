@@ -1,3 +1,15 @@
+:root {
+  --color-default: #364d59;
+  --color-primary: #feb900;
+  --color-secondary: #52565e;
+}
+
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Work Sans", sans-serif;
+}
+
 .dropdown {
     position: relative;
     display: block;
@@ -218,5 +230,62 @@ button.close-button {
 button.close-button:hover {
     background-color: #d3302e;
 }
+    /* Стили для фиксированной строки */
+.contact-bar {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: var(--color-default); /* Цвет фона */
+    opacity: 100%;
+    color: var(--color-primary); /* Цвет текста */
+    text-align: center;
+    transition: top 0.3s;
+    z-index: 9999; /* Установка наибольшего значения z-index */
+}
 
+    /* Стили для ссылок */
+.contact-bar a {
+    color: var(--color-primary); /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin-right: 100px;
+}
+.image-container {
+    width: auto;  /* Автоматическая ширина, чтобы сохранить пропорции */
+    height: 600px;  /* Фиксированная высота контейнера */
+    overflow: hidden;  /* Скрыть части изображения, которые выходят за рамки контейнера */
+}
+.image-container img {
+  width: 100%;  /* Заполнить ширину контейнера */
+  height: auto;  /* Автоматическая высота для сохранения пропорций */
+  object-fit: cover;  /* Обрезать изображение, чтобы оно заполнило контейнер без искажения пропорций */
+  object-position: top;  /* Выровнять изображение по верхней части контейнера */
+}
 
+.rectangle-image {
+  width: auto;  /* Фиксированная ширина второго изображения */
+  height: auto;  /* Автоматическая высота для сохранения пропорций */
+  display: block;  /* Убедиться, что изображение не строчное */
+  margin: 0 auto;  /* Центрировать изображение по горизонтали */
+  margin-top: 3%;
+}
+.rectangle-image img {
+  width: 100%;  /* Фиксированная ширина изображения */
+  height: 100px;  /* Фиксированная высота изображения */
+  object-fit: cover;  /* Обрезать изображение, чтобы оно заполнило контейнер без искажения */
+  overflow: hidden;  /* Скрыть части изображения, которые выходят за рамки контейнера */
+}
+.manufacture {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3%;
+}
+.manufacture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
