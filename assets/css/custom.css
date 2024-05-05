@@ -232,6 +232,7 @@ button.close-button:hover {
 }
     /* Стили для фиксированной строки */
 .contact-bar {
+    display: flex;
     position: fixed;
     top: -50px;
     left: 0;
@@ -240,17 +241,36 @@ button.close-button:hover {
     background-color: var(--color-default); /* Цвет фона */
     opacity: 100%;
     color: var(--color-primary); /* Цвет текста */
-    text-align: center;
+    text-align: justify;
     transition: top 0.3s;
     z-index: 9999; /* Установка наибольшего значения z-index */
 }
-
     /* Стили для ссылок */
 .contact-bar a {
     color: var(--color-primary); /* Цвет ссылок */
     text-decoration: none; /* Убираем подчеркивание */
-    margin-right: 100px;
+    margin-right: 50px;
+    margin-left: 25px;
 }
+
+.container a:last-child {
+  margin-right: 0; /* Убираем правый отступ у последней ссылки */
+}
+
+.spacer {
+  flex-grow: 1; /* Пространство, которое занимает пустой блок, растягивается, чтобы занять все оставшееся пространство */
+}
+
+@media (max-width: 768px) {
+  .contact-bar {
+      top: 0; /* Показываем панель контактов при прокрутке вверх на мобильных устройствах */
+  }
+  .contact-bar a {
+    margin-right: 25px;
+    text-align: justify;
+  }
+}
+
 .image-container {
     width: auto;  /* Автоматическая ширина, чтобы сохранить пропорции */
     height: 600px;  /* Фиксированная высота контейнера */

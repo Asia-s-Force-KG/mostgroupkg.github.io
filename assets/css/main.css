@@ -397,19 +397,13 @@ section {
   }
   /* Style for the language switcher in the navbar */
   .language-switcher {
-    margin-left: 10px;
-  }
-
-  .language-switcher img {
-    width: 30px;
-    height: 25px;
-    margin-right: 10px; /* Add 10px right margin to separate image from text */
+    margin-left: 5px;
   }
 
   .language-switcher .dropdown-content {
     display: none;
     position: absolute;
-    margin-right: 10px;
+    margin-top: 10px;
   }
 
   .language-switcher:hover .dropdown-content {
