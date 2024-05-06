@@ -443,6 +443,9 @@ section {
     transition: 0.3s;
     z-index: 9997;
   }
+  .language-switcher {
+    display: none;
+  }
 
   .navbar ul {
     position: absolute;
