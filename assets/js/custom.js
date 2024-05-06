@@ -72,13 +72,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $(document).ready(function(){
-    $('#carouselExampleIndicators').carousel();
-    $('#carouselExampleIndicators1').carousel();
-    $('#carouselExampleIndicators2').carousel();
-    $('#carouselExampleIndicators3').carousel();
-  });
+    // Проверяем, находимся ли мы на странице, где нужно запустить карусели
+    if ($('body').hasClass('carousel-page')) {
+        // Запускаем карусели
+        $('#carouselExampleIndicators').carousel();
+        $('#carouselExampleIndicators1').carousel();
+        $('#carouselExampleIndicators2').carousel();
+        $('#carouselExampleIndicators3').carousel();
 
-$('.carousel').carousel({
-    interval: 5000,  // Changes every 5 seconds
-    wrap: true       // Allows the carousel to loop back to the beginning
-});   
+        $('.carousel').carousel({
+            interval: 5000,  // Changes every 5 seconds
+            wrap: true       // Allows the carousel to loop back to the beginning
+        });
+    }
+});

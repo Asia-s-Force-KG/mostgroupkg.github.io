@@ -238,10 +238,8 @@ button.close-button:hover {
     left: 0;
     height: auto;
     width: 100%;
-    background-color: var(--color-default); /* Цвет фона */
-    opacity: 100%;
     color: var(--color-primary); /* Цвет текста */
-    text-align: justify;
+    text-align: center;
     transition: top 0.3s;
     z-index: 9999; /* Установка наибольшего значения z-index */
 }
@@ -266,8 +264,9 @@ button.close-button:hover {
       top: 0; /* Показываем панель контактов при прокрутке вверх на мобильных устройствах */
   }
   .contact-bar a {
-    margin-right: 25px;
-    text-align: justify;
+    margin-right: 15px;
+    margin-left: 3px;
+    font-size: smaller;
   }
 }
 

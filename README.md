@@ -96,4 +96,33 @@ My Notes for this web-site
 
 Добавить header fix с тем, чтобы он всегда сразу фиксировался на верхней части экрана
 
-        
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="1000">
+              <i class="bi bi-star-fill flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link"></a></h4>
+                <p></p>
+              </div>
+            </div>
+            
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="1150">
+              <i class="bi bi-star-fill flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link"></a></h4>
+                <ul>
+                  <li>
+                    <p></p>
+                  </li>
+                  <li>
+                    <p></p>
+                  </li>
+                  <li>
+                    <p></p>
+                  </li>
+                  <li>
+                    <p></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
