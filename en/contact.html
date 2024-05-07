@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
   <title>Most Group - Home</title>
   <meta content="Leading road construction company in Kyrgyzstan, license KRC-2 No.04504 (Level I responsibility)." name="description">
@@ -36,35 +37,46 @@
   <link href="../assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/custom.css">
 
-</head>
 
+</head>
     <body>
-        <div class="contact-bar" style="background-image:url(../assets/img/main-back.png);">
-        <a href="">+996 (312) 41-88-63</a>
-        <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
-        <div class="spacer"></div>
-        <a href="../ru/contact.html">РУ</a>
-        <a href="contact.html">ENG</a>
+      <script>
+        function timestamp() { 
+            var response = document.getElementById("g-recaptcha-response"); 
+            if (response == null || response.value.trim() == "") {
+                var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());
+                document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
+            } 
+        } setInterval(timestamp, 500); 
+        </script>
+        
+        <div class="headcontact-bar" style="background-image:url(../assets/img/main-back.png);">
+          <a href="">+996 (312) 41-88-63</a>
+          <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
+          <div class="spacer"></div>
+          <a href="../ru/contact.html">РУ</a>
+          <a href="contact.html">ENG</a>
         </div>
         <script>
-        window.addEventListener('scroll', function() {
-        var contactBar = document.querySelector('.contact-bar');
-        if (window.scrollY > 100) { // If scroll is more than 100px, show contact bar
-            contactBar.style.top = '0';
-        } else { // Otherwise hide the contact bar
-            contactBar.style.top = '-50px';
-        }
-        });
+          window.addEventListener('scroll', function() {
+          var contactBar = document.querySelector('.headcontact-bar');
+          if (window.scrollY > 100) { // If scroll is more than 100px, show contact bar
+              contactBar.style.top = '0';
+          } else { // Otherwise hide the contact bar
+              contactBar.style.top = '-50px';
+          }
+          });
         </script>
+        
         <div id="whatsapp-widget" style="margin-right: 50px;">
-        <a href="https://api.whatsapp.com/send?phone=996701884388&text=Hello!+I+am+writing+to+you+from+the+site,+I+need+a+consultation. https://www.mostgroupkg.com/" target="_blank">
-            <img src="https://static.tildacdn.com/tild6361-3035-4238-b364-333036316632/whatsapp-icon.png" alt="Chat with us on WhatsApp" height="50">
-        </a>
+          <a href="https://api.whatsapp.com/send?phone=996701884388&text=Hello!+I+am+writing+to+you+from+the+site,+I+need+a+consultation. https://www.mostgroupkg.com/" target="_blank">
+              <img src="https://static.tildacdn.com/tild6361-3035-4238-b364-333036316632/whatsapp-icon.png" alt="Chat with us on WhatsApp" height="50">
+          </a>
         <script>
-        setTimeout(function() {
-            var whatsappWidget = document.getElementById('whatsapp-widget');
-            whatsappWidget.style.display = 'block';
-        }, 5000); // 5 seconds
+          setTimeout(function() {
+              var whatsappWidget = document.getElementById('whatsapp-widget');
+              whatsappWidget.style.display = 'block';
+          }, 5000); // 5 seconds
         </script>
         </div>
     <!-- ======= Header ======= -->
@@ -89,7 +101,7 @@
                         <!-- <li><a href="" target="_blank">Concrete Products Most Group</a></li> -->
                         <!-- Language Switcher Dropdown -->
                         <li class="language-switcher"> 
-                        <a href="contact.html">EN</a>
+                        <a href="contact.html">ENG</a>
                             <div class="dropdown-content">
                             <a href="../ru/contact.html">РУ</a>
                         </div>
@@ -152,29 +164,34 @@
                   </div><!-- End Google Maps -->
         
                   <div class="col-lg-6">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000000ycHr" method="POST" role="form" class="php-email-form">
+                      <input type="hidden" name="captcha_settings" value='{"keyname":"MgKG_reCaptcha_2","fallback":"true","orgId":"00D06000000ycHr","ts":""}'>
+                      <input type="hidden" name="oid" value="00D06000000ycHr">
+                      <input type="hidden" name="retURL" value="http://mostgroupkg.com/contact-form.html">
+                      <input type="hidden" name="debug" value="1">
+                      <input type="hidden" name="debugEmail" value="zh.abdrakmanov@gmail.com">
+                      
                       <div class="row gy-4">
                         <div class="col-lg-6 form-group">
-                          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                          <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" required>
                         </div>
                         <div class="col-lg-6 form-group">
-                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                          <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required>
                         </div>
                       </div>
                       <div class="form-group">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                       </div>
                       <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        <textarea class="form-control" name="description" rows="5" placeholder="Description" required></textarea>
                       </div>
-                      <div class="my-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                      <div class="g-recaptcha" data-sitekey="6LeSQdQpAAAAAGqDaxCtdomZ6wM7Vx7gHpLeZfPn"></div><br>
+                      <div class="text-center">
+                        <input type="submit" name="submit" class="btn btn-primary" value="Send Message">
                       </div>
-                      <div class="text-center"><button type="submit">Send Message</button></div>
                     </form>
                   </div>
+                  
                   <!-- End Contact Form -->
         
                 </div>
@@ -192,7 +209,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
                             <div class="footer-info">
-                                <h3>LLC "Most Group"</h3>
+                                <h3>Most Group LLC</h3>
                                 <p>
                                 L. Tolstoy Street, 103 A<br>
                                 Bishkek, 720009, Kyrgyzstan<br><br>
@@ -251,6 +268,7 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>

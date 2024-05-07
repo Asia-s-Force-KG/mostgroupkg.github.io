@@ -40,10 +40,29 @@
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/custom.css">
 
 </head>
 
 <body>
+
+  <div class="headcontact-bar" style="background-image:url(../assets/img/main-back.png);">
+    <a href="">+996 (312) 41-88-63</a>
+    <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
+    <div class="spacer"></div>
+    <a href="service-details.html">РУ</a>
+    <a href="../en/service-details.html">ENG</a>
+</div>
+<script>
+  window.addEventListener('scroll', function() {
+  var contactBar = document.querySelector('.headcontact-bar');
+  if (window.scrollY > 100) { // Если прокрутка больше 100px, показываем контакт-бар
+    contactBar.style.top = '0';
+  } else { // Иначе скрываем контакт-бар
+    contactBar.style.top = '-50px';
+  }
+});
+</script>
 
   <div id="whatsapp-widget" style="margin-right: 50px;">
     <a href="https://api.whatsapp.com/send?phone=996701884388&text=Здравствуйте!+Я+пишу+вам+с+сайта+нужна+консультация. https://www.mostgroupkg.com/" target="_blank">
@@ -77,11 +96,11 @@
           <!-- <li><a href="blog.html">Новости</a></li> -->
           <li><a href="contact.html">Контакт</a></li>
            <!-- Language Switcher Dropdown -->
-           <!-- <li class="language-switcher"> 
-            <a href="service-details.html"><img src="https://static.tildacdn.com/tild6539-3238-4161-a465-626339623035/3.png" alt="Russian Flag">Русский</a> -->
-            <!-- <div class="dropdown-content">
-              <a href="en/service-details.html"><img src="https://static.tildacdn.com/tild3430-3239-4333-b666-663236633532/2.png" alt="English Flag">English</a>
-            </div> -->
+           <li class="language-switcher"> 
+            <a href="service-details.html">РУ</a>
+            <div class="dropdown-content">
+              <a href="../en/service-details.html">ENG</a>
+            </div>
         </li>
         </ul>
       </nav><!-- .navbar -->
@@ -252,7 +271,7 @@
             </ul>
             </div>
           </div>
-          </div><br>
+          </div>
           
           <div id="Производство всех марок бетона-details" class="service-content col-lg-8" style="display: none;">
 

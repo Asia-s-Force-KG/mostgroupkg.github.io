@@ -37,6 +37,24 @@
 
 <body>
 
+  <div class="headcontact-bar" style="background-image:url(../assets/img/main-back.png);">
+    <a href="">+996 (312) 41-88-63</a>
+    <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
+    <div class="spacer"></div>
+    <a href="contact.html">РУ</a>
+    <a href="../en/contact.html">ENG</a>
+</div>
+<script>
+  window.addEventListener('scroll', function() {
+  var contactBar = document.querySelector('.headcontact-bar');
+  if (window.scrollY > 100) { // Если прокрутка больше 100px, показываем контакт-бар
+    contactBar.style.top = '0';
+  } else { // Иначе скрываем контакт-бар
+    contactBar.style.top = '-50px';
+  }
+});
+</script>
+
   <div id="whatsapp-widget" style="margin-right: 50px;">
     <a href="https://api.whatsapp.com/send?phone=996701884388&text=Здравствуйте!+Я+пишу+вам+с+сайта+нужна+консультация. https://www.mostgroupkg.com/" target="_blank">
       <img src="https://static.tildacdn.com/tild6361-3035-4238-b364-333036316632/whatsapp-icon.png" alt="Чат с нами в WhatsApp" height="50">

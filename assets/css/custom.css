@@ -159,79 +159,8 @@ video {
   }
 }
 
-  /* Стили для модального окна */
-  #modal-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-#modal {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Стили для формы в модальном окне */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button[type="submit"] {
-    background-color: #25d366;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button[type="submit"]:hover {
-    background-color: #128c7e;
-}
-
-button.close-button {
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button.close-button:hover {
-    background-color: #d3302e;
-}
     /* Стили для фиксированной строки */
-.contact-bar {
+.headcontact-bar {
     display: flex;
     position: fixed;
     top: -50px;
@@ -244,7 +173,7 @@ button.close-button:hover {
     z-index: 9999; /* Установка наибольшего значения z-index */
 }
     /* Стили для ссылок */
-.contact-bar a {
+.headcontact-bar a {
     color: var(--color-primary); /* Цвет ссылок */
     text-decoration: none; /* Убираем подчеркивание */
     margin-right: 50px;
@@ -260,10 +189,10 @@ button.close-button:hover {
 }
 
 @media (max-width: 768px) {
-  .contact-bar {
+  .headcontact-bar {
       top: 0; /* Показываем панель контактов при прокрутке вверх на мобильных устройствах */
   }
-  .contact-bar a {
+  .headcontact-bar a {
     margin-right: 15px;
     margin-left: 3px;
     font-size: smaller;
