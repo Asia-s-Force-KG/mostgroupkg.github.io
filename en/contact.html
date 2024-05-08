@@ -40,6 +40,20 @@
 
 </head>
     <body>
+
+      <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            var fullName = document.getElementById("full_name").value.trim();
+            var names = fullName.split(/\s+/); // Splits the name by spaces
+            var firstName = names[0];
+            var lastName = names.slice(1).join(' '); // Joins the remaining parts as last name
+        
+            document.getElementById("first_name").value = firstName;
+            document.getElementById("last_name").value = lastName || ''; // Ensures last name is not undefined
+        });
+      </script>
+        
+
       <script>
         function timestamp() { 
             var response = document.getElementById("g-recaptcha-response"); 
@@ -160,32 +174,50 @@
                 <div class="row gy-4 mt-1">
         
                   <div class="col-lg-6 ">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414.8365150010414!2d74.54122228600109!3d42.864775630594664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec8f6c65d41d5%3A0xfdf228c03c943a6f!2s103%D0%B0%20Lev%20Tolstoy%20St%2C%20Bishkek%20720009!5e0!3m2!1sen!2skg!4v1696229261057!5m2!1sen!2skg" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414.8365150010414!2d74.54122228600109!3d42.864775630594664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec8f6c65d41d5%3A0xfdf228c03c943a6f!2s103%D0%B0%20Lev%20Tolstoy%20St%2C%20Bishkek%20720009!5e0!3m2!1sen!2skg!4v1696229261057!5m2!1sen!2skg" frameborder="0" style="border:0; width: 100%; height: 100%;" allowfullscreen></iframe>
                   </div><!-- End Google Maps -->
         
                   <div class="col-lg-6">
-                    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000000ycHr" method="POST" role="form" class="php-email-form">
+                    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000000ycHr&retURL=http://mostgroupkg.com" method="POST" role="form" class="php-email-form">
                       <input type="hidden" name="captcha_settings" value='{"keyname":"MgKG_reCaptcha_2","fallback":"true","orgId":"00D06000000ycHr","ts":""}'>
                       <input type="hidden" name="oid" value="00D06000000ycHr">
                       <input type="hidden" name="retURL" value="http://mostgroupkg.com/contact-form.html">
-                      <input type="hidden" name="debug" value="1">
-                      <input type="hidden" name="debugEmail" value="zh.abdrakmanov@gmail.com">
-                      
+                      <!-- <input type="hidden" name="debug" value="1">
+                      <input type="hidden" name="debugEmail" value="zh.abdrakmanov@gmail.com"> -->
+                      <input type="hidden" id="country" maxlength="40" name="country" size="20" type="text" value="KG" />
+                      <input type="hidden" name="Language" id="Language">
+                      <select style="display:none" id="recordType" name="recordType">
+                        <option value="">--None--</option>
+                        <option value="01206000001EEZc" selected>Lead Org</option>
+                        <option value="01206000001EEZd">Lead Student</option>
+                      </select>
+                      <input id="00N0600000Nl7kN" name="00N0600000Nl7kN" type="checkbox" value="1" checked style="display: none;"/>
+
                       <div class="row gy-4">
-                        <div class="col-lg-6 form-group">
-                          <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" required>
+                        <!-- Hidden first name and last name fields -->
+                        <div class="col-lg-6 form-group" style="display:none;">
+                            <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" required>
                         </div>
-                        <div class="col-lg-6 form-group">
-                          <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required>
+                        <div class="col-lg-6 form-group" style="display:none;">
+                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required>
                         </div>
-                      </div>
+                    
+                        <!-- Visible full name and phone fields -->
+                        <div class="col-lg-12 form-group">
+                            <input type="text" class="form-control" id="full_name" placeholder="Full Name" required>
+                        </div>
+                        <div class="col-lg-12 form-group">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" required>
+                        </div>
+                    </div>
+                    
                       <div class="form-group">
                         <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                       </div>
                       <div class="form-group">
                         <textarea class="form-control" name="description" rows="5" placeholder="Description" required></textarea>
                       </div>
-                      <div class="g-recaptcha" data-sitekey="6LeSQdQpAAAAAGqDaxCtdomZ6wM7Vx7gHpLeZfPn"></div><br>
+                      <div class="g-recaptcha" data-sitekey="6LeSQdQpAAAAAGqDaxCtdomZ6wM7Vx7gHpLeZfPn" style="text-align: center;"></div><br>
                       <div class="text-center">
                         <input type="submit" name="submit" class="btn btn-primary" value="Send Message">
                       </div>
