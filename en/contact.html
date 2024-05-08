@@ -49,15 +49,18 @@
                 alert("Please complete the reCAPTCHA to proceed!");
                 return false;
             }
-    
-            var captchaSettings = document.getElementsByName("captcha_settings")[0];
-            var elems = JSON.parse(captchaSettings.value);
-            elems["ts"] = JSON.stringify(new Date().getTime());
-            captchaSettings.value = JSON.stringify(elems);
-    
-            return true;
         }
-    
+        
+        function timestamp() { 
+          var response = document.getElementById("g-recaptcha-response"); 
+          if (response == null || response.value.trim() == "") {
+            var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+            elems["ts"] = JSON.stringify(new Date().getTime());
+            document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
+          } 
+        } 
+        setInterval(timestamp, 500); 
+
         function enableSubmitBtn() {
             var response = grecaptcha.getResponse();
             if (response.length !== 0) {
@@ -182,15 +185,14 @@
                   </div><!-- End Google Maps -->
         
                   <div class="col-lg-6">
-                    <form id="myForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000000ycHr&retURL=http://mostgroupkg.com" method="POST" role="form" class="php-email-form" onsubmit="return validateRecaptcha();">
+                    <form id="myForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000000ycHr&retURL=https://mostgroupkg.com/en/contact-success.html" method="POST" role="form" class="php-email-form" onsubmit="return validateRecaptcha();">
                       <input type="hidden" name="captcha_settings" value='{"keyname":"MgKG_reCaptcha_2","fallback":"true","orgId":"00D06000000ycHr","ts":""}'>
                       <input type="hidden" name="oid" value="00D06000000ycHr">
-                      <input type="hidden" name="retURL" value="http://mostgroupkg.com/contact-form.html">
+                      <input type="hidden" name="retURL" value="https://mostgroupkg.com/en/contact-success.html">
                       <input type="hidden" name="debug" value="1">
                       <input type="hidden" name="debugEmail" value="zh.abdrakmanov@gmail.com">
                       <input type="hidden" id="country" maxlength="40" name="country" size="20" type="text" value="KG" />
                       <select style="display:none" id="recordType" name="recordType">
-                          <option value="">--None--</option>
                           <option value="01206000001EEZc" selected>Lead Org</option>
                           <option value="01206000001EEZd">Lead Student</option>
                       </select>
@@ -246,7 +248,7 @@
                                 <p>+996 (312) 41 88 63</p>
                                 <p>+996 (312) 41 88 57</p>
                                 <br>
-                                <strong>Email:</strong><a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
+                                <strong>Email:</strong><a href="mailto:info@mostgroupkg.com"> info@mostgroupkg.com</a>
                                 </p>
                                 <div class="social-links d-flex mt-3">
                                     <a href="https://www.youtube.com/channel/UCX1PKed6s8BvQ0D6c8oAkng" class="d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-youtube"></i></a>

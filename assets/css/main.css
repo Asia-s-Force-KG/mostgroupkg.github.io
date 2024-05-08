@@ -1762,6 +1762,22 @@ section {
   background: rgba(254, 185, 0, 0.8);
 }
 
+.contact .php-email-form .btn-primary {
+  background: var(--color-primary);
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact .php-email-form .btn-primary:hover {
+  background: rgba(254, 185, 0, 0.8);
+}
+
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
