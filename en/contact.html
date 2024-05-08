@@ -36,6 +36,7 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://www.google.com/recaptcha/api.js"></script>
 
 
 </head>
@@ -58,7 +59,7 @@
           } return true;  // Allow form submission
         }
         </script>
-        
+
         <div class="headcontact-bar" style="background-image:url(../assets/img/main-back.png);">
           <a href="">+996 (312) 41-88-63</a>
           <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
@@ -173,7 +174,7 @@
                   </div><!-- End Google Maps -->
         
                   <div class="col-lg-6">
-                    <form id="myForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000000ycHr&retURL=http://mostgroupkg.com" method="POST" role="form" class="php-email-form">
+                    <form id="myForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D06000000ycHr&retURL=http://mostgroupkg.com" method="POST" role="form" class="php-email-form" onsubmit="return validateRecaptcha();">
                       <input type="hidden" name="captcha_settings" value='{"keyname":"MgKG_reCaptcha_2","fallback":"true","orgId":"00D06000000ycHr","ts":""}'>
                       <input type="hidden" name="oid" value="00D06000000ycHr">
                       <input type="hidden" name="retURL" value="http://mostgroupkg.com/contact-form.html">
@@ -181,36 +182,61 @@
                       <input type="hidden" name="debugEmail" value="zh.abdrakmanov@gmail.com">
                       <input type="hidden" id="country" maxlength="40" name="country" size="20" type="text" value="KG" />
                       <select style="display:none" id="recordType" name="recordType">
-                        <option value="">--None--</option>
-                        <option value="01206000001EEZc" selected>Lead Org</option>
-                        <option value="01206000001EEZd">Lead Student</option>
+                          <option value="">--None--</option>
+                          <option value="01206000001EEZc" selected>Lead Org</option>
+                          <option value="01206000001EEZd">Lead Student</option>
                       </select>
                       <input id="00N0600000Nl7kN" name="00N0600000Nl7kN" type="checkbox" value="1" checked style="display: none;"/>
-
+              
                       <div class="row gy-4">
-                        <!-- Hidden first name and last name fields -->
-                        <div class="col-lg-6 form-group">
-                            <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name">
-                        </div>
-                        <div class="col-lg-6 form-group">
-                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required>
-                        </div>
-                        
-                        <div class="col-lg-12 form-group">
-                          <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
-                        </div>
-                    </div>
-                      <div class="form-group">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                          <div class="col-lg-6 form-group">
+                              <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name">
+                          </div>
+                          <div class="col-lg-6 form-group">
+                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required>
+                          </div>
+                          
+                          <div class="col-lg-12 form-group">
+                              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+                          </div>
                       </div>
                       <div class="form-group">
-                        <textarea class="form-control" name="description" rows="5" placeholder="Your message please" required></textarea>
+                          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                       </div>
-                      <div class="g-recaptcha" data-sitekey="6LeSQdQpAAAAAGqDaxCtdomZ6wM7Vx7gHpLeZfPn" style="text-align: center;"></div><br>
+                      <div class="form-group">
+                          <textarea class="form-control" name="description" rows="5" placeholder="Your message please" required></textarea>
+                      </div>
+                      <div class="g-recaptcha" data-sitekey="your_site_key" style="text-align: center;"></div><br>
                       <div class="text-center">
-                        <input type="submit" name="submit" class="btn btn-primary" value="Send Message">
+                          <input type="submit" name="submit" class="btn btn-primary" value="Send Message" id="submitBtn" disabled>
                       </div>
-                    </form>
+                  </form>
+              
+                  <script>
+                  function validateRecaptcha() {
+                      var response = grecaptcha.getResponse();
+                      if (response.length === 0) {
+                          alert("Please complete the reCAPTCHA to proceed!");
+                          return false;
+                      }
+              
+                      var captchaSettings = document.getElementsByName("captcha_settings")[0];
+                      var elems = JSON.parse(captchaSettings.value);
+                      elems["ts"] = JSON.stringify(new Date().getTime());
+                      captchaSettings.value = JSON.stringify(elems);
+              
+                      return true;
+                  }
+              
+                  function enableSubmitBtn() {
+                      var response = grecaptcha.getResponse();
+                      if (response.length !== 0) {
+                          document.getElementById("submitBtn").disabled = false;
+                      }
+                  }
+              
+                  setInterval(enableSubmitBtn, 500);
+                  </script>
                   </div>
                   
                   <!-- End Contact Form -->
@@ -289,7 +315,7 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+  
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/aos/aos.js"></script>
     <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
