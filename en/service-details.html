@@ -44,34 +44,41 @@
 
     <body>
         <div class="headcontact-bar" style="background-image:url(../assets/img/main-back.png);">
-            <a href="">+996 (312) 41-88-63</a>
-            <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
-            <div class="spacer"></div>
-            <a href="../ru/service-details.html">РУ</a>
-            <a href="service-details.html">ENG</a>
-        </div>
-        <script>
+            <img src="../assets/img/logo_without_a_back.png" alt="Logo">
+            <div class="mobile-contact-icons">
+              <a href="tel:996312418857"><i class="bi bi-telephone-fill"></i></a>
+              <a href="mailto:info@mostgroupkg.com"><i class="bi bi-envelope-fill"></i></a>
+            </div>  
+            <div class="desk-contact">
+              <a href="">+996 (312) 41-88-63</a>
+              <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
+            </div>
+            <div class="language-links">
+                <a href="../index.html">РУ</a>
+                <a href="index.html">ENG</a>
+            </div>
+          </div>
+          <script>
             window.addEventListener('scroll', function() {
             var contactBar = document.querySelector('.headcontact-bar');
-            if (window.scrollY > 100) { // If scroll is more than 100px, show contact bar
-                contactBar.style.top = '0';
-            } else { // Otherwise hide the contact bar
-                contactBar.style.top = '-50px';
+            if (window.scrollY > 100) { // Если прокрутка больше 100px, показываем контакт-бар
+              contactBar.style.top = '0';
+            } else { // Иначе скрываем контакт-бар
+              contactBar.style.top = '-80px';
             }
-            });
-        </script>
-
-        <div id="whatsapp-widget" style="margin-right: 50px;">
-            <a href="https://api.whatsapp.com/send?phone=996701884388&text=Hello!+I+am+writing+to+you+from+the+site,+I+need+a+consultation. https://www.mostgroupkg.com/" target="_blank">
-                <img src="https://static.tildacdn.com/tild6361-3035-4238-b364-333036316632/whatsapp-icon.png" alt="Chat with us on WhatsApp" height="50">
+          });
+          </script>
+          <div id="whatsapp-widget" style="margin-right: 50px;">
+            <a href="https://api.whatsapp.com/send?phone=996701884388&text=Здравствуйте!+Я+пишу+вам+с+сайта+нужна+консультация. https://www.mostgroupkg.com/" target="_blank">
+              <img src="https://static.tildacdn.com/tild6361-3035-4238-b364-333036316632/whatsapp-icon.png" alt="Чат с нами в WhatsApp" height="50">
             </a>
-        <script>
-            setTimeout(function() {
-                var whatsappWidget = document.getElementById('whatsapp-widget');
-                whatsappWidget.style.display = 'block';
-            }, 5000); // 5 seconds
-        </script>
-        </div>
+            <script>
+                setTimeout(function() {
+                    var whatsappWidget = document.getElementById('whatsapp-widget');
+                    whatsappWidget.classList.add('show');
+                }, 5000); // 5 seconds
+            </script>
+          </div>
     <!-- ======= Header ======= -->
         <header id="header" class="header d-flex align-items-center">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -88,15 +95,15 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html" class="active">Our Services</a></li>
-                        <!-- <li><a href="ru/projects.html">Projects</a></li>
-                        <li><a href="ru/blog.html">News</a></li> -->
+                        <!-- <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">News</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                         <!-- <li><a href="" target="_blank">Concrete Products Most Group</a></li> -->
                         <!-- Language Switcher Dropdown -->
                         <li class="language-switcher"> 
                         <a href="service-details.html">ENG</a>
                             <div class="dropdown-content">
-                            <a href="../ru/service-details.html">РУ</a>
+                            <a href="../service-details.html">РУ</a>
                         </div>
                         </li>
                     </ul>
@@ -124,15 +131,15 @@
 
                         <div class="col-lg-4">
                             <div class="services-list">
-                              <a href="#" class="active">Construction Equipment</a>
+                              <a href="#" class="active">Construction equipment and machinery</a>
                               <a href="#">Manufacture of Reinforced Concrete Products</a>
-                              <a href="#">Production of all grades of concrete</a>
+                              <a href="#">Ready-mixed concrete</a>
                               <a href="#">Construction and Installation Works</a>
-                              <a href="#">Construction of bridges and roads</a>
+                              <a href="#">Roads and Bridges</a>
                               <a href="#">Road construction works: asphalting</a>
                             </div>
 
-                            <div id="Construction equipment-content" class="service-content" style="display: none;">
+                            <div id="Construction equipment and machinery-content" class="service-content" style="display: none;">
                                 <h4>Rental of Construction Equipment</h4>
                                 <p>Our company offers a wide range of construction equipment for rent, 
                                 providing flexibility and accessibility for our clients. With our capabilities, 
@@ -146,8 +153,8 @@
                                 precast concrete products according to individual designs of any complexity, ensuring high quality and precision in execution.</p>
                             </div>
 
-                            <div id="Production of all grades of concrete-content" class="service-content" style="display: none;">
-                                <h4>Production of All Concrete Brands</h4>
+                            <div id="Ready-mixed concrete-content" class="service-content" style="display: none;">
+                                <h4>Ready-mixed concrete</h4>
                                 <p>We are committed to delivering products that fully meet 
                                 the expectations of our clients, and we constantly strive to improve our services and products.</p>
                             </div>
@@ -156,10 +163,10 @@
                                 <h4>Construction and Installation Works</h4>
                                 <p>We strive for innovation and excellence in every aspect of our work to provide clients 
                                 not only with quality results but also with optimal solutions for their needs. 
-                                Choose "Bridge Group" as your reliable partner in construction!</p>
+                                Choose "Most Group" as your reliable partner in construction!</p>
                             </div>
 
-                            <div id="Construction of bridges and roads-content" class="service-content" style="display: none;">
+                            <div id="Roads and Bridges-content" class="service-content" style="display: none;">
                                 <h4>Long-Term Perspective</h4>
                                 <p>Through a combination of highly skilled specialists, modern equipment, and accumulated knowledge, 
                                 we are capable of building bridges that will serve as a reliable foundation for many generations.</p>
@@ -264,7 +271,7 @@
                                 </div>
                             </div>
 
-                            <div id="Production of all grades of concrete-details" class="service-content col-lg-8" style="display: none;">
+                            <div id="Ready-mixed concrete-details" class="service-content col-lg-8" style="display: none;">
 
                                 <h3>Production of All Concrete Brands</h3>
                                 <p>
@@ -303,8 +310,8 @@
                             </div>
 
                             <div id="Construction and Installation Works-details" class="service-content col-lg-8" style="display: none;">
-                                <h3>Construction and Installation Works by "Bridge Group"</h3>
-                                <p>"Bridge Group" takes pride in its many years of experience in the field of construction and installation works. We cover the entire range of services - from project documentation development to turnkey project delivery. All our technical and technological solutions are developed taking into account the latest industry requirements and standards.</p>
+                                <h3>Construction and Installation Works by "Most Group"</h3>
+                                <p>"Most Group" takes pride in its many years of experience in the field of construction and installation works. We cover the entire range of services - from project documentation development to turnkey project delivery. All our technical and technological solutions are developed taking into account the latest industry requirements and standards.</p>
                                 <h4>Our services include:</h4>
                                 <ul>
                                 <li><i class="bi bi-check-circle"></i> General Contracting: Full control over the construction process at all stages of the project.</li>
@@ -433,7 +440,7 @@
                     
                             </div>
 
-                            <div id="Construction of bridges and roads-details" class="service-content col-lg-8" style="display: none;">
+                            <div id="Roads and Bridges-details" class="service-content col-lg-8" style="display: none;">
                                 <h3>Construction and Reconstruction of Bridges</h3>
                                 <p>For many years, our company has specialized in the construction and reconstruction of bridges, overpasses, and other artificial structures. We apply innovative materials, such as self-compacting and shrinkage-free concrete, to guarantee the durability and reliability of each project.</p>
                                 <h4>Expertise and Quality</h4>
@@ -623,7 +630,7 @@
                                     
                             </div>
 
-                            <div id="Construction Equipment-details" class="service-content col-lg-8" style="display: none;">
+                            <div id="Construction equipment and machinery-details" class="service-content col-lg-8" style="display: none;">
                                 <h3>Wide Range of Construction Equipment Services:</h3>
                                 <p>
                                     The production base of Most Group is equipped with everything necessary for efficient work:
@@ -845,12 +852,12 @@
                         <div class="col-lg-2 col-md-3 footer-links">
                             <h4>Our Services</h4>
                             <ul>
-                            <li><a href="service-details.html?service=Construction Equipment">Construction Equipment</a></li>
-                            <li><a href="service-details.html?service=Manufacturing of concrete products">Concrete Products</a></li>
-                            <li><a href="service-details.html?service=Production of all brands of concrete">Concrete</a></li>
-                            <li><a href="service-details.html?service=Construction and installation works">Construction and Installation Works</a></li>
-                            <li><a href="service-details.html?service=Construction of bridges and roads">Bridges and Roads</a></li>
-                            <li><a href="service-details.html?service=Road construction works: asphalt paving">Asphalt Paving</a></li>
+                                <li><a href="service-details.html?service=Construction equipment and machinery">Construction Equipment</a></li>
+                                <li><a href="service-details.html?service=Manufacture of Reinforced Concrete Products">Concrete Products</a></li>
+                                <li><a href="service-details.html?service=Ready-mixed concrete">Concrete</a></li>
+                                <li><a href="service-details.html?service=Construction and installation works">Construction and Installation Works</a></li>
+                                <li><a href="service-details.html?service=Roads and Bridges">Bridges and Roads</a></li>
+                                <li><a href="service-details.html?service=Road construction works: asphalt paving">Asphalt Paving</a></li>
                             </ul>
                         </div>
 
@@ -879,7 +886,6 @@
     <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="../assets/vendor/php-email-form/validate.js"></script>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

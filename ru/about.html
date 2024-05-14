@@ -40,35 +40,41 @@
 <body>
 
   <div class="headcontact-bar" style="background-image:url(../assets/img/main-back.png);">
-    <a href="">+996 (312) 41-88-63</a>
-    <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
-    <div class="spacer"></div>
-    <a href="../index.html">РУ</a>
-    <a href="../en/index.html">ENG</a>
+    <img src="../assets/img/logo_without_a_back.png" alt="Logo">
+    <div class="mobile-contact-icons">
+      <a href="tel:996312418857"><i class="bi bi-telephone-fill"></i></a>
+      <a href="mailto:info@mostgroupkg.com"><i class="bi bi-envelope-fill"></i></a>
+    </div>  
+    <div class="desk-contact">
+      <a href="">+996 (312) 41-88-63</a>
+      <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
+    </div>
+    <div class="language-links">
+      <a href="../index.html">РУ</a>
+      <a href="../en/index.html">ENG</a>
+    </div>
   </div>
   <script>
     window.addEventListener('scroll', function() {
     var contactBar = document.querySelector('.headcontact-bar');
-    if (window.scrollY > 100) { // If scroll is more than 100px, show contact bar
-        contactBar.style.top = '0';
-    } else { // Otherwise hide the contact bar
-        contactBar.style.top = '-50px';
+    if (window.scrollY > 100) { // Если прокрутка больше 100px, показываем контакт-бар
+      contactBar.style.top = '0';
+    } else { // Иначе скрываем контакт-бар
+      contactBar.style.top = '-80px';
     }
-    });
+  });
   </script>
-
   <div id="whatsapp-widget" style="margin-right: 50px;">
     <a href="https://api.whatsapp.com/send?phone=996701884388&text=Здравствуйте!+Я+пишу+вам+с+сайта+нужна+консультация. https://www.mostgroupkg.com/" target="_blank">
       <img src="https://static.tildacdn.com/tild6361-3035-4238-b364-333036316632/whatsapp-icon.png" alt="Чат с нами в WhatsApp" height="50">
     </a>
     <script>
-    setTimeout(function() {
-      var whatsappWidget = document.getElementById('whatsapp-widget');
-      whatsappWidget.style.display = 'block';
-    }, 5000); // 5 секунд
+        setTimeout(function() {
+            var whatsappWidget = document.getElementById('whatsapp-widget');
+            whatsappWidget.classList.add('show');
+        }, 5000); // 5 seconds
     </script>
   </div>
-
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -850,7 +856,6 @@
   <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>

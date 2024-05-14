@@ -55,7 +55,7 @@
 }
 .mobile-image {
     display: none; /* Initially hidden */
-    background-image: url('MostGroupKG/assets/img/main-back.png'); /* Path to static image */
+    background-image: url('../img/main-back.png'); /* Path to static image */
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -134,71 +134,109 @@ video {
   background-color: #bef0d1;
   color: #fff;
   padding: 5px;
-  border-radius: 50px; /* Изменено на 50% для создания круглого виджета */
+  border-radius: 50px;
   cursor: pointer;
-  background-size: 60px; /* Устанавливаем размер фона под иконку (в данном случае 60px) */
-  background-repeat: no-repeat; /* Отключаем повторение фонового изображения */
-  background-position: center center; /* Позиционируем фон в центре виджета */
-  transition: background-color 0.3s; /* Добавляем анимацию изменения цвета фона */
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: background-color 0.3s;
+  z-index: 9999;
+}
+
+#whatsapp-widget.show {
+  display: block;
+  animation: fadeInUp 0.5s ease-in-out;
 }
 
 #whatsapp-widget:hover {
-  background-color: #8ed6bb; /* Цвет фона при наведении */
-  animation: bounce 0.5s; /* Анимация при наведении */
+  background-color: #8ed6bb;
+  animation: bounce 0.5s;
 }
 
 @keyframes bounce {
   0% {
-    transform: translateY(0); /* Начальное положение */
+      transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px); /* Положение в середине анимации */
+      transform: translateY(-5px);
   }
   100% {
-    transform: translateY(0); /* Конечное положение */
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
     /* Стили для фиксированной строки */
-.headcontact-bar {
-    display: flex;
-    position: fixed;
-    top: -50px;
-    left: 0;
-    height: auto;
-    width: 100%;
-    color: var(--color-primary); /* Цвет текста */
-    text-align: center;
-    transition: top 0.3s;
-    z-index: 9999; /* Установка наибольшего значения z-index */
-}
-    /* Стили для ссылок */
-.headcontact-bar a {
-    color: var(--color-primary); /* Цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
-    margin-right: 50px;
-    margin-left: 25px;
-}
-
-.container a:last-child {
-  margin-right: 0; /* Убираем правый отступ у последней ссылки */
-}
-
-.spacer {
-  flex-grow: 1; /* Пространство, которое занимает пустой блок, растягивается, чтобы занять все оставшееся пространство */
-}
-
-@media (max-width: 768px) {
-  .headcontact-bar {
-      top: 0; /* Показываем панель контактов при прокрутке вверх на мобильных устройствах */
+    .headcontact-bar {
+      display: flex; /* Changed from grid to flex */
+      justify-content: space-between; /* Ensure even spacing */
+      align-items: center;
+      position: fixed;
+      top: -80px;
+      height: auto;
+      width: 100%;
+      color: var(--color-primary);
+      text-align: center;
+      transition: top 0.3s;
+      z-index: 9999;
+      background-image: url('assets/img/main-back.png'); /* Ensure background image is included */
+      padding: 10px 20px; /* Adjust padding as needed */
+    
   }
+
+  /* Styles for links */
   .headcontact-bar a {
-    margin-right: 15px;
-    margin-left: 3px;
-    font-size: smaller;
-  }
-}
+      color: var(--color-primary);
+      text-decoration: none;
+      margin-right: 10px;
 
+  }
+
+  .headcontact-bar img {
+      height: 50px;
+  }
+  .desk-contact {
+    display: flex;
+    gap:25px;
+  }
+  
+  .language-links {
+    display: flex;
+    gap: 10px; /* Adjust the gap between language links */
+  }
+
+  .mobile-contact-icons a, 
+  .desk-contact a {
+      margin: 0 5px;
+  }
+
+  .mobile-contact-icons {
+      display: none;
+  }
+
+  @media (max-width: 768px) {
+      .mobile-contact-icons {
+          display: flex;
+          gap: 30px;
+          font-size: 30px;
+      }
+      .headcontact-bar .desk-contact {
+          display: none;
+      }
+      .headcontact-bar {
+          font-size: large;
+      }
+  }
 .image-container {
     width: auto;  /* Автоматическая ширина, чтобы сохранить пропорции */
     height: 600px;  /* Фиксированная высота контейнера */
