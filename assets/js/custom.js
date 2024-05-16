@@ -87,3 +87,16 @@ $(document).ready(function(){
             wrap: true       // Allows the carousel to loop back to the beginning
         });
 });
+
+function openModal(src) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    modal.style.display = "block";
+    modalImg.src = src;
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
