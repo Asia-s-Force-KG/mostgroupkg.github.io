@@ -46,7 +46,7 @@
         </div>  
         <div class="desk-contact">
           <a href="">+996 (312) 41-88-63</a>
-          <a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
+          <a href="mailto:info@mostgroupkg.com"> info@mostgroupkg.com</a>
         </div>
         <div class="language-links">
           <a href="../index.html">РУ</a>
@@ -811,7 +811,165 @@
 
       </div>
     </section><!-- End Testimonials Section -->
+    
+    <section id="projects" class="projects">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="section-header">
+          <h2 class="certificates">Certificate and License</h2>
+        </div>
+      
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-4 img-container">
+            <img src="../assets/img/licenseAndCertificate/1.png" alt="Certificate" onclick="openFullScreen(this)">
+          </div>
+          <div class="col-lg-4 col-md-4 img-container">
+            <img src="../assets/img/licenseAndCertificate/2.png" alt="License" onclick="openFullScreen(this)">
+          </div>
+        </div>
+      
+        <div class="full-screen-img" id="fullScreenImg" onclick="closeFullScreen()">
+          <img id="fullScreenImgSrc" src="" alt="">
+        </div>
+        <script>
+          AOS.init();
+      
+          function openFullScreen(img) {
+            var fullScreenDiv = document.getElementById('fullScreenImg');
+            var fullScreenImg = document.getElementById('fullScreenImgSrc');
+            fullScreenImg.src = img.src;
+            fullScreenDiv.style.display = 'flex';
+          }
+      
+          function closeFullScreen() {
+            var fullScreenDiv = document.getElementById('fullScreenImg');
+            fullScreenDiv.style.display = 'none';
+          }
+        </script>
+      </div>
+    </section>
   
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Testimonials</h2>
+          <p>from our partners and customers</p>
+        </div>
+
+        <div class="slides-2 swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <a href="https://www.tutorperini.com/" target="_blank"><img src="https://static.tildacdn.com/tild3134-3332-4262-b432-653166303030/8-removebg-preview.png" class="testimonial-img"  alt="Logo"></a>
+                  <h3>Tutor Perini Corporation</h3>
+                  <h4>California, USA</h4>
+                  <br>
+                  <img src="../assets/img/testimonials/perini-2002.jpg" alt="Perini Letter" class="testimonial-img-small" onclick="openModal(this.src)">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <a href="https://www.hochtief.de/" target="_blank"><img src="https://static.tildacdn.com/tild3632-6465-4337-b465-613932626562/5-removebg-preview.png" class="testimonial-img"  alt="Logo"></a>
+                  <h3>HOCHTIEF</h3>
+                  <h4>Berlin, Germany</h4>
+                  <br>
+                  <img src="../assets/img/testimonials/abb.jpg" alt="Perini Letter" class="testimonial-img-small" onclick="openModal(this.src)">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <a href="https://www.iwatachizaki.jp/" target="_blank"><img src="https://static.tildacdn.com/tild3436-3263-4562-a538-396235613930/iwata_shizaki-remove.png" class="testimonial-img"  alt="Logo"></a>
+                  <h3>IWATA CHIZAKI Inc</h3>
+                  <h4>Tokyo, Japan</h4>
+                  <br>
+                  <img src="../assets/img/testimonials/iwata-chizaki.jpg" alt="Perini Letter" class="testimonial-img-small" onclick="openModal(this.src)">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <a href="https://bishkek.gov.kg/ru" target="_blank"><img src="https://static.tildacdn.com/tild3933-3234-4233-a231-663166376436/10-removebg-preview.png" class="testimonial-img"  alt="Logo"></a>
+                  <h3>Mayor's Office of Bishkek</h3>
+                  <h4>Bishkek</h4>
+                  <br>
+                  <img src="../assets/img/testimonials/award-2004.jpg" alt="Perini Letter" class="testimonial-img-small" onclick="openModal(this.src)">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <a href="https://bishkek.gov.kg/ru" target="_blank"><img src="https://static.tildacdn.com/tild3933-3234-4233-a231-663166376436/10-removebg-preview.png" class="testimonial-img"  alt="Logo"></a>
+                  <h3>Mayor's Office of Bishkek</h3>
+                  <h4>Bishkek</h4>
+                  <br>
+                  <img src="../assets/img/testimonials/gramota-2011.jpg" alt="Perini Letter" class="testimonial-img-small" onclick="openModal(this.src)">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <a href="https://www.metallobaza.kg/" target="_blank"><img src="https://www.metallobaza.kg/templates/metallobaza/images/logo.jpg" class="testimonial-img"  alt="Logo"></a>
+                  <h3>First Metal Base</h3>
+                  <h4>Bishkek</h4>
+                  <br>
+                  <img src="../assets/img/testimonials/diplom-2013.jpg" alt="Perini Letter" class="testimonial-img-small" onclick="openModal(this.src)">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <a href="#" target="_blank"><img src="https://static.tildacdn.com/tild3933-3234-4233-a231-663166376436/10-removebg-preview.png" class="testimonial-img"  alt="Logo"></a>
+                  <h3>Residents of "Ak-Ordo" Housing Complex</h3>
+                  <h4>Sokuluk</h4>
+                  <br>
+                  <img src="../assets/img/testimonials/gramota-2016.jpg" alt="Perini Letter" class="testimonial-img-small" onclick="openModal(this.src)">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <a href="#" target="_blank"><img src="https://static.tildacdn.com/tild3933-3234-4233-a231-663166376436/10-removebg-preview.png" class="testimonial-img"  alt="Logo"></a>
+                  <h3>Self-Governance "ISKRA"</h3>
+                  <h4>Chuy Region</h4>
+                  <br>
+                  <img src="../assets/img/testimonials/yrazyychylyk-2023.jpg" alt="Perini Letter" class="testimonial-img-small" onclick="openModal(this.src)">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section>
+    
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="img01">
+    </div>
+
     </main> <!-- End #main -->
     
   <!-- ======= Footer ======= -->
@@ -829,7 +987,7 @@
                     <p>+996 (312) 41 88 63</p>
                     <p>+996 (312) 41 88 57</p>
                     <br>
-                    <strong>Email:</strong><a href="mailto:info@mostgroupkg.com">info@mostgroupkg.com</a>
+                    <strong>Email:</strong><a href="mailto:info@mostgroupkg.com"> info@mostgroupkg.com</a>
                   </p>
               <div class="social-links d-flex mt-3">
                 <a href="https://www.youtube.com/channel/UCX1PKed6s8BvQ0D6c8oAkng" class="d-flex align-items-center justify-content-center" target="_blank"><i class="bi bi-youtube"></i></a>
@@ -852,9 +1010,9 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="service-details.html?service=Construction equipment and machinery">Construction Equipment</a></li>
-            <li><a href="service-details.html?service=Manufacture of Reinforced Concrete Products">Concrete Products</a></li>
-            <li><a href="service-details.html?service=Ready-mixed concrete">Concrete</a></li>
+            <li><a href="service-details.html?service=Construction equipment and machinery">Construction equipment and machinery</a></li>
+            <li><a href="service-details.html?service=Manufacture of Reinforced Concrete Products">Manufacture of Reinforced Concrete Products</a></li>
+            <li><a href="service-details.html?service=Ready-mixed concrete">Ready-mixed concrete</a></li>
             <li><a href="service-details.html?service=Construction and installation works">Construction and Installation Works</a></li>
             <li><a href="service-details.html?service=Roads and Bridges">Bridges and Roads</a></li>
             <li><a href="service-details.html?service=Road construction works: asphalt paving">Asphalt Paving</a></li>
@@ -890,6 +1048,7 @@
   
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/custom.js"></script>
 
 </body>
 </html>

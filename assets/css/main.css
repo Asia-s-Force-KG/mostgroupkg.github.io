@@ -96,6 +96,13 @@ section {
     max-width: 60%;
   }
 }
+@media screen and (max-width: 768px) {
+  .section-header .certificates {
+    font-size: 30px;
+  
+  }
+  
+}
 
 /*--------------------------------------------------------------
 # Breadcrumbs

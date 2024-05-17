@@ -313,6 +313,7 @@ video {
 .testimonial-img-small {
   width: 100px; /* Resize the image to 100px width */
   cursor: pointer; /* Change cursor to pointer when hovering over the image */
+  object-position: center;
 }
 
 .modal {
