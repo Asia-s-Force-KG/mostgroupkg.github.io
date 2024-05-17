@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <link rel="stylesheet" href="path/to/your/css/swiper-bundle.min.css">
+  <style>
+    /* Styles for the modal */
+    #carouselModal {
+      display: none; /* Hide by default */
+      position: fixed; /* Stay in place */
+      z-index: 1000; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    }
+
+    #carouselModal .modal-content {
+      position: relative;
+      margin: 150px auto; /* Centered within the screen */
+      padding: 0;
+      width: calc(100% - 300px); /* Full width minus 150px on each side */
+      height: calc(100% - 300px); /* Full height minus 150px on top and bottom */
+      background-color: #fefefe;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      animation-name: animatetop;
+      animation-duration: 0.4s;
+    }
+
+    /* Add Animation */
+    @keyframes animatetop {
+      from { top: -300px; opacity: 0; }
+      to { top: 0; opacity: 1; }
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<section id="project-details" class="project-details">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div id="carouselModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeCarousel">&times;</span>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/img/projects/our-projects/tunel-chychcan/2.JPG" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/img/projects/our-projects/tunel-chychcan/3.JPG" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/img/projects/our-projects/tunel-chychcan/4.JPG" alt="">
+            </div>
+            <!-- Add other slides here -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-description">
+      <h2>Тунель Чычкан</h2>
+      <p>
+        <span class="carousel-icon" id="openCarousel">Посмотреть фото <i class="bi bi-camera-fill"></i></span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script src="path/to/your/js/swiper-bundle.min.js"></script>
+<script>
+  var modal = document.getElementById("carouselModal");
+  var openCarousel = document.getElementById("openCarousel");
+  var closeCarousel = document.getElementById("closeCarousel");
+
+  openCarousel.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  closeCarousel.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+</body>
+</html>
