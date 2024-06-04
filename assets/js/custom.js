@@ -72,20 +72,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $(document).ready(function(){
-        // Запускаем карусели
-        $('#carouselExampleIndicators').carousel();
-        $('#carouselExampleIndicators1').carousel();
-        $('#carouselExampleIndicators2').carousel();
-        $('#carouselExampleIndicators3').carousel();
-        $('#carouselExampleIndicators4').carousel();
-        $('#carouselExampleIndicators5').carousel();
-        $('#carouselExampleIndicators6').carousel();
-        $('#carouselExampleIndicators7').carousel();
+    // Запускаем карусели
+    $('#carouselExampleIndicators').carousel();
+    $('#carouselExampleIndicators1').carousel();
+    $('#carouselExampleIndicators2').carousel();
+    $('#carouselExampleIndicators3').carousel();
+    $('#carouselExampleIndicators4').carousel();
+    $('#carouselExampleIndicators5').carousel();
+    $('#carouselExampleIndicators6').carousel();
+    $('#carouselExampleIndicators7').carousel();
 
-        $('.carousel').carousel({
-            interval: 5000,  // Changes every 5 seconds
-            wrap: true       // Allows the carousel to loop back to the beginning
-        });
+    $('.carousel').carousel({
+        interval: 5000,  // Changes every 5 seconds
+        wrap: true       // Allows the carousel to loop back to the beginning
+    });
 });
 
 function openModal(src) {
@@ -99,4 +99,16 @@ function openModal(src) {
   function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
+  }
+
+  function openFullScreen(img) {
+    var fullScreenDiv = document.getElementById('fullScreenImg');
+    var fullScreenImg = document.getElementById('fullScreenImgSrc');
+    fullScreenImg.src = img.src;
+    fullScreenDiv.style.display = 'flex';
+  }
+
+  function closeFullScreen() {
+    var fullScreenDiv = document.getElementById('fullScreenImg');
+    fullScreenDiv.style.display = 'none';
   }
