@@ -382,3 +382,34 @@ video {
   width: 80%;
   max-width: 700px;
 }
+
+.custom-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.custom-col {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.custom-col img {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .custom-col {
+      flex: 0 0 49%;
+      max-width: 49%;
+  }
+
+  .custom-col:first-child {
+      margin-right: 5px;
+  }
+
+  .custom-col:last-child {
+      margin-left: 5px;
+  }
+}
